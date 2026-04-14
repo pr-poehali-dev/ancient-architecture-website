@@ -146,7 +146,7 @@ export default function Index() {
 
       <main className="max-w-4xl mx-auto px-4 py-8">
         {/* Сетка карточек */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {buildings.map((b, i) => (
             <div
               key={b.id}
