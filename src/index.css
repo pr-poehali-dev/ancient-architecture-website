@@ -50,20 +50,18 @@
     @apply bg-background text-foreground;
     font-family: "Golos Text", sans-serif;
     background-image:
-      radial-gradient(
-        circle at 20px 20px,
-        hsl(var(--decor-dark) / 0.07) 1px,
-        transparent 1px
-      ),
-      radial-gradient(
-        circle at 60px 60px,
-        hsl(var(--decor-dark) / 0.05) 1px,
+      radial-gradient(circle, hsl(var(--decor) / 0.12) 1px, transparent 1px),
+      linear-gradient(hsl(var(--decor-dark) / 0.06) 1px, transparent 1px),
+      linear-gradient(
+        90deg,
+        hsl(var(--decor-dark) / 0.06) 1px,
         transparent 1px
       ),
       linear-gradient(180deg, hsl(220, 15%, 10%) 0%, hsl(220, 20%, 8%) 100%);
     background-size:
-      80px 80px,
-      80px 80px,
+      32px 32px,
+      32px 32px,
+      32px 32px,
       100% 100%;
   }
 }
