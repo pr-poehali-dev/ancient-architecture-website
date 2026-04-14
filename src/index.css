@@ -72,33 +72,61 @@
 .side-decorations::before {
   left: 0;
   background:
+    linear-gradient(180deg, hsl(38, 60%, 50% / 0.6) 0px, transparent 1px) 12px
+      0 / 1px 100% no-repeat,
+    linear-gradient(180deg, hsl(38, 60%, 50% / 0.3) 0px, transparent 1px) 28px
+      0 / 1px 100% no-repeat,
     repeating-linear-gradient(
       180deg,
       transparent,
-      transparent 80px,
-      hsl(38, 60%, 50%) 80px,
-      hsl(38, 60%, 50%) 81px,
-      transparent 81px,
-      transparent 120px
+      transparent 60px,
+      hsl(38, 60%, 50%) 60px,
+      hsl(38, 60%, 50%) 61px,
+      transparent 61px,
+      transparent 100px
     ),
-    linear-gradient(90deg, hsl(38, 60%, 30% / 0.15), transparent);
-  border-right: 1px solid hsl(38, 60%, 30% / 0.2);
+    repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 30px,
+        hsl(38, 60%, 50% / 0.3) 30px,
+        hsl(38, 60%, 50% / 0.3) 31px,
+        transparent 31px,
+        transparent 50px
+      )
+      28px 0 / 32px 100%,
+    linear-gradient(90deg, hsl(38, 60%, 30% / 0.12), transparent);
+  border-right: 1px solid hsl(38, 60%, 30% / 0.25);
 }
 
 .side-decorations::after {
   right: 0;
   background:
+    linear-gradient(180deg, hsl(38, 60%, 50% / 0.6) 0px, transparent 1px)
+      calc(100% - 12px) 0 / 1px 100% no-repeat,
+    linear-gradient(180deg, hsl(38, 60%, 50% / 0.3) 0px, transparent 1px)
+      calc(100% - 28px) 0 / 1px 100% no-repeat,
     repeating-linear-gradient(
       180deg,
       transparent,
-      transparent 80px,
-      hsl(38, 60%, 50%) 80px,
-      hsl(38, 60%, 50%) 81px,
-      transparent 81px,
-      transparent 120px
+      transparent 60px,
+      hsl(38, 60%, 50%) 60px,
+      hsl(38, 60%, 50%) 61px,
+      transparent 61px,
+      transparent 100px
     ),
-    linear-gradient(270deg, hsl(38, 60%, 30% / 0.15), transparent);
-  border-left: 1px solid hsl(38, 60%, 30% / 0.2);
+    repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 30px,
+        hsl(38, 60%, 50% / 0.3) 30px,
+        hsl(38, 60%, 50% / 0.3) 31px,
+        transparent 31px,
+        transparent 50px
+      )
+      calc(100% - 28px) 0 / 32px 100%,
+    linear-gradient(270deg, hsl(38, 60%, 30% / 0.12), transparent);
+  border-left: 1px solid hsl(38, 60%, 30% / 0.25);
 }
 
 .side-dots::before,
