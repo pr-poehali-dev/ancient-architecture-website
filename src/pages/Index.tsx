@@ -192,18 +192,16 @@ export default function Index() {
           <p className="text-xs tracking-widest uppercase text-amber-500 font-medium mb-4">
             Контакты
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
-            <a href="https://max.ru/ancientworld" className="hover:text-foreground transition-colors">
+          <div className="flex flex-col sm:flex-row gap-3 text-sm">
+            <span className="border border-border rounded-lg px-4 py-2 text-muted-foreground cursor-default">
               MAX: @ancientworld
-            </a>
-            <span className="hidden sm:block text-border">·</span>
-            <a href="https://t.me/ancientworld" className="hover:text-foreground transition-colors">
+            </span>
+            <span className="border border-border rounded-lg px-4 py-2 text-muted-foreground cursor-default">
               Telegram: @ancientworld
-            </a>
-            <span className="hidden sm:block text-border">·</span>
-            <a href="mailto:ancientworld@yandex.ru" className="hover:text-foreground transition-colors">
+            </span>
+            <span className="border border-border rounded-lg px-4 py-2 text-muted-foreground cursor-default">
               Почта: ancientworld@yandex.ru
-            </a>
+            </span>
           </div>
         </div>
       </footer>
