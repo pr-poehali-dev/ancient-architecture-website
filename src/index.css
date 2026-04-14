@@ -36,3 +36,83 @@
     font-family: "Golos Text", sans-serif;
   }
 }
+
+.side-decorations {
+  position: relative;
+}
+
+.side-decorations::before,
+.side-decorations::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.4;
+}
+
+.side-decorations::before {
+  left: 0;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 80px,
+      hsl(38, 60%, 50%) 80px,
+      hsl(38, 60%, 50%) 81px,
+      transparent 81px,
+      transparent 120px
+    ),
+    linear-gradient(90deg, hsl(38, 60%, 30% / 0.15), transparent);
+  border-right: 1px solid hsl(38, 60%, 30% / 0.2);
+}
+
+.side-decorations::after {
+  right: 0;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 80px,
+      hsl(38, 60%, 50%) 80px,
+      hsl(38, 60%, 50%) 81px,
+      transparent 81px,
+      transparent 120px
+    ),
+    linear-gradient(270deg, hsl(38, 60%, 30% / 0.15), transparent);
+  border-left: 1px solid hsl(38, 60%, 30% / 0.2);
+}
+
+.side-dots::before,
+.side-dots::after {
+  content: "✦";
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: hsl(38, 60%, 50%);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 11;
+  writing-mode: vertical-rl;
+  letter-spacing: 40px;
+}
+
+.side-dots::before {
+  left: 20px;
+}
+
+.side-dots::after {
+  right: 20px;
+}
+
+@media (max-width: 900px) {
+  .side-decorations::before,
+  .side-decorations::after,
+  .side-dots::before,
+  .side-dots::after {
+    display: none;
+  }
+}

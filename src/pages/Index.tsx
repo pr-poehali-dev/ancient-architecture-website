@@ -88,7 +88,7 @@ const emojis = ["🏺", "🏛️", "🗻", "🏯", "⛩️", "🪨", "🕌", "�
 export default function Index() {
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background side-decorations side-dots">
       {/* Навигация */}
       <nav className="bg-card border-b border-border px-4 py-3 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto flex items-center gap-4">
