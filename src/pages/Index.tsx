@@ -155,7 +155,7 @@ export default function Index() {
                 <img
                   src={b.image}
                   alt={b.name}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-64 object-cover"
                 />
               ) : (
                 <div className="w-full h-40 bg-muted flex items-center justify-center text-5xl">
