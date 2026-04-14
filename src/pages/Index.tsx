@@ -98,14 +98,56 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Шапка */}
-      <header className="bg-white border-b border-gray-200 py-6 px-4">
+      <header className="bg-white border-b border-gray-200 px-4 pt-12 pb-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-gray-900 mb-1">
+          {/* Декоративная линия сверху */}
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-amber-300" />
+            <span className="text-amber-400 text-lg">✦</span>
+            <div className="h-px w-8 bg-amber-300" />
+            <span className="text-amber-400 text-lg">✦</span>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-amber-300" />
+          </div>
+
+          <p className="text-xs tracking-widest uppercase text-amber-500 font-medium mb-3">
+            Наследие цивилизаций
+          </p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             🏛️ Великие постройки древности
           </h1>
-          <p className="text-gray-500 text-sm">
-            10 архитектурных чудес, изменивших историю
+
+          {/* Описание проекта */}
+          <p className="text-gray-600 text-base leading-relaxed max-w-2xl mb-2">
+            Этот сайт — путеводитель по десяти самым выдающимся архитектурным сооружениям,
+            которые человечество создало за тысячи лет своей истории. Каждая постройка
+            отражает гений своей эпохи: от египетских пирамид до римских акведуков.
           </p>
+          <p className="text-gray-400 text-sm">
+            Нажмите на любую карточку, чтобы узнать подробнее.
+          </p>
+
+          {/* Три маленьких факта */}
+          <div className="flex flex-wrap gap-4 mt-6">
+            {[
+              { icon: "🗺️", text: "6 регионов мира" },
+              { icon: "📅", text: "5000+ лет истории" },
+              { icon: "🏗️", text: "10 построек" },
+            ].map((item) => (
+              <div
+                key={item.text}
+                className="flex items-center gap-2 bg-amber-50 border border-amber-100 rounded-full px-4 py-1.5 text-sm text-amber-700"
+              >
+                <span>{item.icon}</span>
+                <span>{item.text}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Декоративная линия снизу */}
+          <div className="flex items-center gap-3 mt-8">
+            <div className="h-px w-8 bg-gray-200" />
+            <div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent" />
+          </div>
         </div>
       </header>
 
