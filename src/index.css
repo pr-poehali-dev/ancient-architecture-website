@@ -82,31 +82,9 @@
 .side-decor::before {
   left: 0;
   background:
-    linear-gradient(180deg, hsl(var(--decor) / 0.6) 0px, transparent 1px) 12px
+    linear-gradient(180deg, hsl(var(--decor) / 0.6) 0px, transparent 1px) 20px
       0 / 1px 100% no-repeat,
-    linear-gradient(180deg, hsl(var(--decor) / 0.3) 0px, transparent 1px) 28px
-      0 / 1px 100% no-repeat,
-    repeating-linear-gradient(
-      180deg,
-      transparent 0px,
-      transparent 60px,
-      hsl(var(--decor)) 60px,
-      hsl(var(--decor)) 61px,
-      transparent 61px,
-      transparent 100px
-    ),
-    repeating-linear-gradient(
-        180deg,
-        transparent 0px,
-        transparent 30px,
-        hsl(var(--decor) / 0.3) 30px,
-        hsl(var(--decor) / 0.3) 31px,
-        transparent 31px,
-        transparent 50px
-      )
-      28px 0 / 32px 100%,
     linear-gradient(90deg, hsl(var(--decor-dark) / 0.12), transparent);
-  border-right: 1px solid hsl(var(--decor-dark) / 0.25);
   padding-left: 14px;
 }
 
@@ -114,30 +92,8 @@
   right: 0;
   background:
     linear-gradient(180deg, hsl(var(--decor) / 0.6) 0px, transparent 1px)
-      calc(100% - 12px) 0 / 1px 100% no-repeat,
-    linear-gradient(180deg, hsl(var(--decor) / 0.3) 0px, transparent 1px)
-      calc(100% - 28px) 0 / 1px 100% no-repeat,
-    repeating-linear-gradient(
-      180deg,
-      transparent 0px,
-      transparent 60px,
-      hsl(var(--decor)) 60px,
-      hsl(var(--decor)) 61px,
-      transparent 61px,
-      transparent 100px
-    ),
-    repeating-linear-gradient(
-        180deg,
-        transparent 0px,
-        transparent 30px,
-        hsl(var(--decor) / 0.3) 30px,
-        hsl(var(--decor) / 0.3) 31px,
-        transparent 31px,
-        transparent 50px
-      )
-      calc(100% - 28px) 0 / 32px 100%,
+      calc(100% - 20px) 0 / 1px 100% no-repeat,
     linear-gradient(270deg, hsl(var(--decor-dark) / 0.12), transparent);
-  border-left: 1px solid hsl(var(--decor-dark) / 0.25);
   padding-right: 14px;
 }
 
