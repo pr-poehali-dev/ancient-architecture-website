@@ -50,7 +50,7 @@ export default function Index() {
             Десять шедевров архитектуры из разных уголков планеты.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-6">
+          <div className="flex gap-4 mt-6">
             {FACTS.map((item) => (
               <div
                 key={item.text}
@@ -92,7 +92,7 @@ export default function Index() {
           <p className="text-xs tracking-widest uppercase text-amber-500 font-medium mb-4">
             Контакты
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 text-sm">
+          <div className="flex flex-row gap-3 text-sm">
             <span className="border border-border rounded-lg px-4 py-2 text-muted-foreground cursor-default">
               MAX: @ancientworld
             </span>
