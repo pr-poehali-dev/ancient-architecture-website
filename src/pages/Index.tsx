@@ -31,7 +31,7 @@ const buildings = [
     location: "Китай",
     year: "VII в. до н.э. — XVI в.",
     description: "Самое длинное сооружение в истории — более 21 000 км. Строилась 2000 лет.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/4755964d-e0d1-4ab9-830f-af93af03a117.jpg",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const buildings = [
     location: "Афины, Греция",
     year: "447–438 до н.э.",
     description: "Храм богини Афины — шедевр дорической архитектуры. Колонны наклонены, чтобы выглядеть прямыми.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/b6fe69af-06ef-4498-bec5-020e5fe1019c.jpg",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const buildings = [
     location: "Англия",
     year: "~3000–1500 до н.э.",
     description: "Мегалитический комплекс старше 5000 лет. Камни весом до 25 тонн привезены за сотни километров.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/549d9048-e986-434d-8620-ed38bf078b7c.jpg",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ const buildings = [
     location: "Камбоджа",
     year: "XII в. н.э.",
     description: "Крупнейший религиозный комплекс в мире — 162 гектара. Построен за 30 лет.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/a91ac934-db6e-4b94-b09c-c2005ddf782d.jpg",
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ const buildings = [
     location: "Иордания",
     year: "~400 до н.э.",
     description: "«Розовый город», высеченный в скалах. Потерян для мира на 600 лет, открыт вновь в 1812 году.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/bd4655ed-0734-4923-be54-24d11ac3e807.jpg",
   },
   {
     id: 9,
@@ -71,7 +71,7 @@ const buildings = [
     location: "Мексика",
     year: "I–VII вв. н.э.",
     description: "Крупнейший город доколумбовой Америки. Пирамида Солнца — третья по высоте в мире.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/dbff547b-2486-484d-b360-89a080d7b803.jpg",
   },
   {
     id: 10,
@@ -79,7 +79,7 @@ const buildings = [
     location: "Франция",
     year: "I в. н.э.",
     description: "Римский акведук высотой 49 метров. Построен без раствора — камни держатся за счёт идеальной подгонки.",
-    image: "",
+    image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/f207113f-1818-41dc-9f3f-0a2646bd9653.jpg",
   },
 ];
 
