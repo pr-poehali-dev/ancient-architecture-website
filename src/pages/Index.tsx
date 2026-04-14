@@ -89,9 +89,9 @@ export default function Index() {
   const [selected, setSelected] = useState<(typeof buildings)[0] | null>(null);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Шапка */}
-      <header className="bg-white border-b border-gray-200 px-4 pt-12 pb-10">
+      <header className="bg-card border-b border-border px-4 pt-12 pb-10">
         <div className="max-w-4xl mx-auto">
           {/* Декоративная линия сверху */}
           <div className="flex items-center gap-3 mb-6">
@@ -105,17 +105,17 @@ export default function Index() {
           <p className="text-xs tracking-widest uppercase text-amber-500 font-medium mb-3">
             Наследие цивилизаций
           </p>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-foreground mb-4">
             🏛️ Великие постройки древности
           </h1>
 
           {/* Описание проекта */}
-          <p className="text-gray-600 text-base leading-relaxed max-w-2xl mb-2">
+          <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mb-2">
             Этот сайт — путеводитель по десяти самым выдающимся архитектурным сооружениям,
             которые человечество создало за тысячи лет своей истории. Каждая постройка
             отражает гений своей эпохи: от египетских пирамид до римских акведуков.
           </p>
-          <p className="text-gray-400 text-sm">
+          <p className="text-muted-foreground text-sm">
             Нажмите на любую карточку, чтобы узнать подробнее.
           </p>
 
@@ -128,7 +128,7 @@ export default function Index() {
             ].map((item) => (
               <div
                 key={item.text}
-                className="flex items-center gap-2 bg-amber-50 border border-amber-100 rounded-full px-4 py-1.5 text-sm text-amber-700"
+                className="flex items-center gap-2 bg-amber-950/40 border border-amber-800/40 rounded-full px-4 py-1.5 text-sm text-amber-400"
               >
                 <span>{item.icon}</span>
                 <span>{item.text}</span>
@@ -138,8 +138,8 @@ export default function Index() {
 
           {/* Декоративная линия снизу */}
           <div className="flex items-center gap-3 mt-8">
-            <div className="h-px w-8 bg-gray-200" />
-            <div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent" />
+            <div className="h-px w-8 bg-border" />
+            <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
           </div>
         </div>
       </header>
@@ -151,7 +151,7 @@ export default function Index() {
             <div
               key={b.id}
               onClick={() => setSelected(b)}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md hover:border-blue-300 transition-all"
+              className="bg-card rounded-xl border border-border overflow-hidden cursor-pointer hover:shadow-lg hover:border-blue-500/50 transition-all"
             >
               {b.image ? (
                 <img
@@ -160,7 +160,7 @@ export default function Index() {
                   className="w-full h-40 object-cover"
                 />
               ) : (
-                <div className="w-full h-40 bg-gray-100 flex items-center justify-center text-5xl">
+                <div className="w-full h-40 bg-muted flex items-center justify-center text-5xl">
                   {emojis[b.id - 1]}
                 </div>
               )}
@@ -170,12 +170,12 @@ export default function Index() {
                   <span className="text-xs text-blue-500 font-medium">
                     {b.location}
                   </span>
-                  <span className="text-xs text-gray-400">{b.year}</span>
+                  <span className="text-xs text-muted-foreground">{b.year}</span>
                 </div>
-                <h2 className="text-lg font-semibold text-gray-900 mb-2">
+                <h2 className="text-lg font-semibold text-foreground mb-2">
                   {b.name}
                 </h2>
-                <p className="text-sm text-gray-500 line-clamp-2">
+                <p className="text-sm text-muted-foreground line-clamp-2">
                   {b.description}
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function Index() {
           onClick={() => setSelected(null)}
         >
           <div
-            className="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-xl"
+            className="bg-card rounded-2xl max-w-lg w-full overflow-hidden shadow-xl border border-border"
             onClick={(e) => e.stopPropagation()}
           >
             {selected.image ? (
@@ -203,7 +203,7 @@ export default function Index() {
                 className="w-full h-56 object-cover"
               />
             ) : (
-              <div className="w-full h-32 bg-gray-100 flex items-center justify-center text-6xl">
+              <div className="w-full h-32 bg-muted flex items-center justify-center text-6xl">
                 {emojis[selected.id - 1]}
               </div>
             )}
@@ -214,21 +214,21 @@ export default function Index() {
                   <span className="text-xs text-blue-500 font-medium">
                     {selected.location}
                   </span>
-                  <span className="text-xs text-gray-400 ml-3">
+                  <span className="text-xs text-muted-foreground ml-3">
                     {selected.year}
                   </span>
                 </div>
                 <button
                   onClick={() => setSelected(null)}
-                  className="text-gray-400 hover:text-gray-600 text-xl leading-none"
+                  className="text-muted-foreground hover:text-foreground text-xl leading-none"
                 >
                   ✕
                 </button>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              <h2 className="text-2xl font-bold text-foreground mb-3">
                 {selected.name}
               </h2>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {selected.description}
               </p>
             </div>
