@@ -89,8 +89,18 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Навигация */}
+      <nav className="bg-card border-b border-border px-4 py-3 sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto flex items-center gap-4">
+          <span className="text-amber-400 font-bold mr-auto">🏛️ Древность</span>
+          <a href="#main" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Главная</a>
+          <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">О Древности</a>
+          <a href="#contacts" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
+        </div>
+      </nav>
+
       {/* Шапка */}
-      <header className="bg-card border-b border-border px-4 pt-12 pb-10">
+      <header id="main" className="bg-card border-b border-border px-4 pt-12 pb-10">
         <div className="max-w-4xl mx-auto">
           {/* Декоративная линия сверху */}
           <div className="flex items-center gap-3 mb-6">
@@ -109,13 +119,13 @@ export default function Index() {
           </h1>
 
           {/* Описание проекта */}
-          <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mb-2">
+          <p id="about" className="text-muted-foreground text-base leading-relaxed max-w-2xl mb-2">
             Этот сайт — путеводитель по десяти самым выдающимся архитектурным сооружениям,
             которые человечество создало за тысячи лет своей истории. Каждая постройка
             отражает гений своей эпохи: от египетских пирамид до римских акведуков.
           </p>
           <p className="text-muted-foreground text-sm">
-            Нажмите на любую карточку, чтобы узнать подробнее.
+            Десять шедевров архитектуры из разных уголков планеты.
           </p>
 
           {/* Три маленьких факта */}
@@ -185,7 +195,7 @@ export default function Index() {
       </main>
 
       {/* Футер с контактами */}
-      <footer className="border-t border-border mt-8 py-10 px-4">
+      <footer id="contacts" className="border-t border-border mt-8 py-10 px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-widest uppercase text-amber-500 font-medium mb-4">
             Контакты
