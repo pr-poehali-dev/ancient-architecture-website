@@ -1,5 +1,3 @@
-import React from "react";
-
 const buildings = [
   {
     id: 1,
@@ -83,19 +81,28 @@ const buildings = [
   },
 ];
 
-const emojis = ["🏺", "🏛️", "🗻", "🏯", "⛩️", "🪨", "🕌", "🏜️", "🌋", "🌉"];
+const NAV_LINKS = [
+  { href: "#main", label: "Главная" },
+  { href: "#about", label: "О Древности" },
+  { href: "#contacts", label: "Контакты" },
+];
+
+const FACTS = [
+  { icon: "🗺️", text: "6 регионов мира" },
+  { icon: "📅", text: "5000+ лет истории" },
+  { icon: "🏗️", text: "10 построек" },
+];
 
 export default function Index() {
-
   return (
-    <div className="min-h-screen bg-background side-decorations side-dots">
+    <div className="min-h-screen bg-background side-decor">
       {/* Навигация */}
       <nav className="bg-card border-b border-border px-4 py-3 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto flex items-center gap-4">
           <span className="text-amber-400 font-bold mr-auto">🏛️ Древность</span>
-          <a href="#main" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Главная</a>
-          <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">О Древности</a>
-          <a href="#contacts" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{link.label}</a>
+          ))}
         </div>
       </nav>
 
@@ -130,11 +137,7 @@ export default function Index() {
 
           {/* Три маленьких факта */}
           <div className="flex flex-wrap gap-4 mt-6">
-            {[
-              { icon: "🗺️", text: "6 регионов мира" },
-              { icon: "📅", text: "5000+ лет истории" },
-              { icon: "🏗️", text: "10 построек" },
-            ].map((item) => (
+            {FACTS.map((item) => (
               <div
                 key={item.text}
                 className="flex items-center gap-2 bg-amber-950/40 border border-amber-800/40 rounded-full px-4 py-1.5 text-sm text-amber-400"
@@ -156,22 +159,17 @@ export default function Index() {
       <main className="max-w-4xl mx-auto px-4 py-8">
         {/* Сетка карточек */}
         <div className="grid grid-cols-1 gap-4">
-          {buildings.map((b, i) => (
+          {buildings.map((b) => (
             <div
               key={b.id}
               className="bg-card rounded-xl border border-border overflow-hidden"
             >
-              {b.image ? (
-                <img
-                  src={b.image}
-                  alt={b.name}
-                  className="w-full h-64 object-cover"
-                />
-              ) : (
-                <div className="w-full h-40 bg-muted flex items-center justify-center text-5xl">
-                  {emojis[b.id - 1]}
-                </div>
-              )}
+              <img
+                src={b.image}
+                alt={b.name}
+                className="w-full h-64 object-cover"
+                loading="lazy"
+              />
 
               <div className="p-4">
                 <div className="flex items-center justify-between mb-1">
