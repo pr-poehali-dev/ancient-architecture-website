@@ -61,7 +61,7 @@
 
 .side-decor::before,
 .side-decor::after {
-  content: "✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦";
+  content: "";
   position: fixed;
   top: 0;
   bottom: 0;
