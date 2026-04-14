@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 
 const buildings = [
   {
@@ -6,7 +6,7 @@ const buildings = [
     name: "Пирамида Хеопса",
     location: "Египет",
     year: "~2560 до н.э.",
-    description: "Единственное из семи чудес древнего мира, дошедшее до наших дней. Высота 138 метров, около 2,3 миллиона каменных блоков.",
+    description: "Единственное из семи чудес древнего мира, дошедшее до наших дней. Высота 138 метров. Около 2,3 миллиона каменных блоков весом до 80 тонн были уложены вручную с невероятной точностью. Строительство заняло около 20 лет. До XIV века оставалась самым высоким сооружением на Земле.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/b449713c-0b72-47d9-851f-0cf318492c52.jpg",
   },
   {
@@ -14,7 +14,7 @@ const buildings = [
     name: "Колизей",
     location: "Рим, Италия",
     year: "72–80 н.э.",
-    description: "Крупнейший амфитеатр античного мира. Вмещал до 80 000 зрителей. Строился 8 лет.",
+    description: "Крупнейший амфитеатр античного мира, вмещавший до 80 000 зрителей. Строился 8 лет. Здесь проводились гладиаторские бои, охоты на диких зверей и даже морские сражения — арена заполнялась настоящей водой. Сегодня Колизей — один из главных символов Рима и всей античной цивилизации.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/1a45b5a3-995c-401e-ab3a-7985dead0d4b.jpg",
   },
   {
@@ -22,7 +22,7 @@ const buildings = [
     name: "Мачу-Пикчу",
     location: "Перу",
     year: "~1450 н.э.",
-    description: "«Затерянный город инков» на высоте 2430 метров. Построен без колеса и железных инструментов.",
+    description: "«Затерянный город инков» на высоте 2430 метров над уровнем моря. Построен без колеса и железных инструментов. Испанские конкистадоры так и не нашли его. Город был заброшен и заново открыт лишь в 1911 году американским исследователем Хайрамом Бингемом.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/e0156dc5-acdd-4036-bea4-d25be68cd43e.jpg",
   },
   {
@@ -30,7 +30,7 @@ const buildings = [
     name: "Великая Китайская стена",
     location: "Китай",
     year: "VII в. до н.э. — XVI в.",
-    description: "Самое длинное сооружение в истории — более 21 000 км. Строилась 2000 лет.",
+    description: "Самое длинное сооружение в истории человечества — более 21 000 км. Строилась на протяжении 2000 лет разными династиями. В кладку добавляли рисовый клей для прочности. Миллионы рабочих погибли при строительстве, за что стену называют «самым длинным кладбищем мира».",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/4755964d-e0d1-4ab9-830f-af93af03a117.jpg",
   },
   {
@@ -38,7 +38,7 @@ const buildings = [
     name: "Парфенон",
     location: "Афины, Греция",
     year: "447–438 до н.э.",
-    description: "Храм богини Афины — шедевр дорической архитектуры. Колонны наклонены, чтобы выглядеть прямыми.",
+    description: "Храм богини Афины на вершине афинского Акрополя — совершенный пример дорической архитектуры. Колонны слегка наклонены и сужаются кверху — это оптическая иллюзия, которая делает здание идеально прямым на вид. Строительство заняло всего 9 лет.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/b6fe69af-06ef-4498-bec5-020e5fe1019c.jpg",
   },
   {
@@ -46,7 +46,7 @@ const buildings = [
     name: "Стоунхендж",
     location: "Англия",
     year: "~3000–1500 до н.э.",
-    description: "Мегалитический комплекс старше 5000 лет. Камни весом до 25 тонн привезены за сотни километров.",
+    description: "Мегалитический комплекс, возраст которого превышает 5000 лет. Камни весом до 25 тонн были доставлены за сотни километров. Точное предназначение до сих пор неизвестно — возможно, солнечная обсерватория или культовое место для ритуалов.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/549d9048-e986-434d-8620-ed38bf078b7c.jpg",
   },
   {
@@ -54,7 +54,7 @@ const buildings = [
     name: "Ангкор-Ват",
     location: "Камбоджа",
     year: "XII в. н.э.",
-    description: "Крупнейший религиозный комплекс в мире — 162 гектара. Построен за 30 лет.",
+    description: "Крупнейший религиозный комплекс в мире — площадь 162 гектара. Построен за 30 лет при короле Сурьявармане II. Вырезанные на стенах рельефы тянутся на 600 метров. Изначально посвящён индуистскому богу Вишну, позднее стал буддийским храмом.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/a91ac934-db6e-4b94-b09c-c2005ddf782d.jpg",
   },
   {
@@ -62,7 +62,7 @@ const buildings = [
     name: "Петра",
     location: "Иордания",
     year: "~400 до н.э.",
-    description: "«Розовый город», высеченный в скалах. Потерян для мира на 600 лет, открыт вновь в 1812 году.",
+    description: "«Розовый город», высеченный прямо в скалах набатеями. Содержал сложнейшую систему водоснабжения для 30 000 жителей посреди пустыни. Был потерян для западной цивилизации на 600 лет и вновь открыт швейцарским путешественником в 1812 году.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/bd4655ed-0734-4923-be54-24d11ac3e807.jpg",
   },
   {
@@ -70,7 +70,7 @@ const buildings = [
     name: "Теотиуакан",
     location: "Мексика",
     year: "I–VII вв. н.э.",
-    description: "Крупнейший город доколумбовой Америки. Пирамида Солнца — третья по высоте в мире.",
+    description: "Крупнейший город доколумбовой Америки с населением до 200 000 человек. Пирамида Солнца — третья по высоте в мире. Имя создателей неизвестно: когда ацтеки нашли город, он уже был заброшен. Они дали ему название «место, где рождаются боги».",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/dbff547b-2486-484d-b360-89a080d7b803.jpg",
   },
   {
@@ -78,7 +78,7 @@ const buildings = [
     name: "Пон-дю-Гар",
     location: "Франция",
     year: "I в. н.э.",
-    description: "Римский акведук высотой 49 метров. Построен без раствора — камни держатся за счёт идеальной подгонки.",
+    description: "Трёхуровневый римский акведук высотой 49 метров — шедевр инженерии. Построен без раствора: камни держатся лишь за счёт идеальной подгонки друг к другу. Подавал 40 000 кубометров воды в сутки городу Ниму на протяжении нескольких столетий.",
     image: "https://cdn.poehali.dev/projects/b661f13e-003a-4afa-b085-4c32749f3248/files/f207113f-1818-41dc-9f3f-0a2646bd9653.jpg",
   },
 ];
@@ -86,7 +86,6 @@ const buildings = [
 const emojis = ["🏺", "🏛️", "🗻", "🏯", "⛩️", "🪨", "🕌", "🏜️", "🌋", "🌉"];
 
 export default function Index() {
-  const [selected, setSelected] = useState<(typeof buildings)[0] | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
@@ -150,8 +149,7 @@ export default function Index() {
           {buildings.map((b, i) => (
             <div
               key={b.id}
-              onClick={() => setSelected(b)}
-              className="bg-card rounded-xl border border-border overflow-hidden cursor-pointer hover:shadow-lg hover:border-blue-500/50 transition-all"
+              className="bg-card rounded-xl border border-border overflow-hidden"
             >
               {b.image ? (
                 <img
@@ -175,7 +173,7 @@ export default function Index() {
                 <h2 className="text-lg font-semibold text-foreground mb-2">
                   {b.name}
                 </h2>
-                <p className="text-sm text-muted-foreground line-clamp-2">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {b.description}
                 </p>
               </div>
@@ -205,56 +203,6 @@ export default function Index() {
           </div>
         </div>
       </footer>
-
-      {/* Модальное окно */}
-      {selected && (
-        <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
-          onClick={() => setSelected(null)}
-        >
-          <div
-            className="bg-card rounded-2xl max-w-lg w-full overflow-hidden shadow-xl border border-border"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {selected.image ? (
-              <img
-                src={selected.image}
-                alt={selected.name}
-                className="w-full h-56 object-cover"
-              />
-            ) : (
-              <div className="w-full h-32 bg-muted flex items-center justify-center text-6xl">
-                {emojis[selected.id - 1]}
-              </div>
-            )}
-
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <div>
-                  <span className="text-xs text-blue-500 font-medium">
-                    {selected.location}
-                  </span>
-                  <span className="text-xs text-muted-foreground ml-3">
-                    {selected.year}
-                  </span>
-                </div>
-                <button
-                  onClick={() => setSelected(null)}
-                  className="text-muted-foreground hover:text-foreground text-xl leading-none"
-                >
-                  ✕
-                </button>
-              </div>
-              <h2 className="text-2xl font-bold text-foreground mb-3">
-                {selected.name}
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {selected.description}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
