@@ -186,6 +186,28 @@ export default function Index() {
 
       </main>
 
+      {/* Футер с контактами */}
+      <footer className="border-t border-border mt-8 py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs tracking-widest uppercase text-amber-500 font-medium mb-4">
+            Контакты
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
+            <a href="https://max.ru/ancientworld" className="hover:text-foreground transition-colors">
+              MAX: @ancientworld
+            </a>
+            <span className="hidden sm:block text-border">·</span>
+            <a href="https://t.me/ancientworld" className="hover:text-foreground transition-colors">
+              Telegram: @ancientworld
+            </a>
+            <span className="hidden sm:block text-border">·</span>
+            <a href="mailto:ancientworld@yandex.ru" className="hover:text-foreground transition-colors">
+              Почта: ancientworld@yandex.ru
+            </a>
+          </div>
+        </div>
+      </footer>
+
       {/* Модальное окно */}
       {selected && (
         <div
