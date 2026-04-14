@@ -86,14 +86,7 @@ const buildings = [
 const emojis = ["🏺", "🏛️", "🗻", "🏯", "⛩️", "🪨", "🕌", "🏜️", "🌋", "🌉"];
 
 export default function Index() {
-  const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<(typeof buildings)[0] | null>(null);
-
-  const filtered = buildings.filter(
-    (b) =>
-      b.name.toLowerCase().includes(search.toLowerCase()) ||
-      b.location.toLowerCase().includes(search.toLowerCase())
-  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -152,22 +145,9 @@ export default function Index() {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Поиск */}
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="🔍 Поиск по названию или стране..."
-          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm mb-2 focus:outline-none focus:border-blue-500 bg-white"
-        />
-
-        <p className="text-xs text-gray-400 mb-6">
-          Найдено: {filtered.length} из {buildings.length}
-        </p>
-
         {/* Сетка карточек */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {filtered.map((b, i) => (
+          {buildings.map((b, i) => (
             <div
               key={b.id}
               onClick={() => setSelected(b)}
@@ -203,12 +183,7 @@ export default function Index() {
           ))}
         </div>
 
-        {filtered.length === 0 && (
-          <div className="text-center py-20 text-gray-400">
-            <p className="text-4xl mb-3">🔍</p>
-            <p>Ничего не найдено</p>
-          </div>
-        )}
+
       </main>
 
       {/* Модальное окно */}
